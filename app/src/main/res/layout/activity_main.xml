@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/header_background"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/layoutProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/viewHeader"
+            app:layout_constraintTop_toBottomOf="@id/viewHeader">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp"
+                        android:gravity="center"
+                        android:text="@string/n_h_u_q_u_y_n_h"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textAbout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/best_female_folk_bolero_singer"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/textName" />
+
+                    <TextView
+                        android:id="@+id/textPost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="@string/_920"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/textFollowers"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textAbout" />
+
+                    <TextView
+                        android:id="@+id/textFollowers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="@string/_119_6k"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/textFollowing"
+                        app:layout_constraintStart_toEndOf="@id/textPost"
+                        app:layout_constraintTop_toBottomOf="@id/textAbout" />
+
+                    <TextView
+                        android:id="@+id/textFollowing"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="@string/_15"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/textFollowers"
+                        app:layout_constraintTop_toBottomOf="@id/textAbout" />
+
+                    <TextView
+                        android:id="@+id/textPostLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/posts"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/textPost"
+                        app:layout_constraintStart_toStartOf="@id/textPost"
+                        app:layout_constraintTop_toBottomOf="@id/textPost" />
+
+                    <TextView
+                        android:id="@+id/textFollowerLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/followers"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/textFollowers"
+                        app:layout_constraintStart_toStartOf="@id/textFollowers"
+                        app:layout_constraintTop_toBottomOf="@id/textFollowing" />
+
+                    <TextView
+                        android:id="@+id/textFollowingLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="@string/followings"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/textFollowing"
+                        app:layout_constraintStart_toStartOf="@id/textFollowing"
+                        app:layout_constraintTop_toBottomOf="@id/textFollowing" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile_picture"
+            app:layout_constraintBottom_toTopOf="@id/layoutProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/layoutProfile"
+            app:riv_border_width="1dp"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/textTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tags"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutProfile" />
+
+        <LinearLayout
+            android:id="@+id/layoutTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/textTags">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/tags_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/singer"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/tags_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/bolero"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/tags_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/folk"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/tags_background"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="@string/beautiful"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textAlbums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/albums"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutTags" />
+
+        <HorizontalScrollView
+            android:id="@+id/layoutAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/textAlbums">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/album_layout_1" />
+
+                <include layout="@layout/album_layout_2" />
+
+                <include layout="@layout/album_layout_3" />
+
+                <include layout="@layout/album_layout_4" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/songs"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutAlbum" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:columnCount="2"
+            android:useDefaultMargins="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSongs">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ben_thuong_hai" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chuyen_hoa_sim" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/con_duong_xua_em_di" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/hue_xua" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lenh_denh_phan_buon" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nguoi_tinh_mua_dong" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/noi_lai_tinh_xua" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:scaleType="centerCrop"
+                android:src="@drawable/vung_la_me_bay" />
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

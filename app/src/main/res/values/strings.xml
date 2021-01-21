@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ProfileUIDesign</string>
+    <string name="n_h_u_q_u_y_n_h">N H U Q U Y N H</string>
+    <string name="best_female_folk_bolero_singer">Best Female Folk, Bolero Singer</string>
+    <string name="_920">920</string>
+    <string name="_119_6k">119.6K</string>
+    <string name="_15">15</string>
+    <string name="posts">Posts</string>
+    <string name="followings">Followings</string>
+    <string name="followers">Followers</string>
+    <string name="tags">Tags</string>
+    <string name="singer">Singer</string>
+    <string name="bolero">Bolero</string>
+    <string name="folk">Folk</string>
+    <string name="beautiful">Beautiful</string>
+    <string name="albums">Albums</string>
+    <string name="em_van_hoai_yeu_anh">Em Van Hoai Yeu Anh</string>
+    <string name="mot_doi_tim_nhau">Mot Doi Tim Nhau</string>
+    <string name="khuc_ca_dong_thap">Khuc Ca Dong Thap</string>
+    <string name="duyen_phan">Duyen Phan</string>
+    <string name="songs">Songs</string>
+</resources>
